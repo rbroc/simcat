@@ -62,7 +62,7 @@ You can also install `simcat` from source by running:
 or
 
 ```
-git clone https://github.com/rbroc/simcat.git`
+git clone https://github.com/rbroc/simcat.git
 cd simcat
 pip3 install -e .
 ```
