@@ -18,11 +18,7 @@ class Agent:
     """
 
     def __init__(
-        self,
-        agent_name,
-        matrix_filename,
-        dict_filename=None,
-        vector_filename=None
+        self, agent_name, matrix_filename, dict_filename=None, vector_filename=None
     ):
         self.name = agent_name or matrix_filename
         self.matrix = Matrix(filename=matrix_filename)
