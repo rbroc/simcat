@@ -151,5 +151,4 @@ simcat
 -------------
 
 **TODO**:
-- Fix tests and add badges & CI (push package)
 - Add citations to preprint (in both READMEs)
