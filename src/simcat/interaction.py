@@ -36,6 +36,10 @@ class Interaction:
             of words in agents' semantic space
         kvals (list): k values used to compute knn-based metrics, such as
             average distance from neighbors
+        stopping_rule (str): 'distance' or 'strength'. If 'distance', the simulation 
+            stops when there are no values in the agent matrix that are lower than 
+            the threshold. If 'strength', the simulation stops when there are no values in 
+            the agent matrix that are higher than the threshold.
         agent_kwargs: named arguments for Agent initialization
     """
 
@@ -53,9 +57,11 @@ class Interaction:
         dict_filenames=None,
         vector_filenames=None,
         kvals=[5],
+        stopping_rule='distance',
         **agent_kwargs,
     ):
         self.nr_agents = nr_agents
+        self.stopping_rule = stopping_rule
         if agents is None:
             agents = []
             if nr_agents is None:
@@ -93,6 +99,8 @@ class Interaction:
                 )
                 agents.append(agent)
         self.agents = [agents] if isinstance(agents, Agent) else agents
+        if self.stopping_rule not in ['distance', 'strength']:
+            raise ValueError('stopping_rule must be "distance" or "strength"')
         for a in self.agents:
             if not isinstance(a, Agent):
                 raise ValueError("agents must be a list of Agent types")
@@ -106,7 +114,7 @@ class Interaction:
         self.threshold = threshold
         self.nr_sim = nr_sim
         self.max_exchanges = max_exchanges or self.agents[0].matrix.data.shape[0]
-        self.log_id = log_id or "log_" + datetime.now().strftime("%Y%m%d%H%M%S")
+        self.log_id = log_id or "log_" + datetime.now().strftime("%Y%m%d-%H%M")
         self.save_folder = save_folder
         self.map_locations = map_locations
         self.kvals = kvals
@@ -191,7 +199,11 @@ class Interaction:
             itr (int): iteration number
             init_seed (str): initial seed of the interaction
         """
-        if (agent.matrix.data[current_seed] < self.threshold).any():
+        if self.stopping_rule == 'distance':
+            rule = (agent.matrix.data[current_seed] < self.threshold).any()
+        else:
+            rule = (agent.matrix.data[current_seed] > self.threshold).any()
+        if rule:
             log, current_seed = self._run_trial(
                 agent, current_seed, turn, itr, init_seed, log
             )
