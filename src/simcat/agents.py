@@ -1,6 +1,5 @@
 import pandas as pd
 import numpy as np
-from .utils import load_matrix
 from .matrix import Matrix
 import json
 from copy import deepcopy
@@ -85,7 +84,7 @@ class Agent:
             resp_neighbors_current,
         ]
 
-    def speak(self, seed, pop=True):
+    def speak(self, seed, stopping_rule='distance', pop=True):
         """Picks response word based on cue (seed).
             Returns probability of cue-response association, and response word.
             Also pops response/cue value if pop=True
@@ -93,7 +92,10 @@ class Agent:
             seed (str): seed word at current turn
             pop (bool): whether to remove the word from memory
         """
-        resp_idx = np.argmin(self.matrix.data[seed])
+        if stopping_rule == 'distance':
+            resp_idx = np.argmin(self.matrix.data[seed])
+        else:
+            resp_idx = np.argmax(self.matrix.data[seed])
         resp_wd = self.matrix.data[seed].index[resp_idx]
         prob = self.listen(seed, resp_wd, pop)
         return round(prob, 5), resp_wd

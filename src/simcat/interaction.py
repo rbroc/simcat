@@ -144,7 +144,8 @@ class Interaction:
             init_seed (str): initial seed word
             log (df): dataframe containing interaction log
         """
-        prob_agent, resp = speaker.speak(seed=seed)
+        prob_agent, resp = speaker.speak(seed=seed,
+                                         stopping_rule=self.stopping_rule)
         prob = [
             a.listen(seed, resp) if a is not speaker else prob_agent
             for a in self.agents
