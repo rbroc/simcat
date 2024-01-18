@@ -31,7 +31,7 @@ def test_vec_filename():
         vector_filename="data/vectors.tsv",
     )
     assert agent.vectors.shape[0] == 240
-    assert agent.vectors.shape[0] == 400
+    assert agent.vectors.shape[1] == 400
 
 
 def test_methods():
