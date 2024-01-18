@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "simcat"
 version = "0.2"
 authors = [
-  { name="Roberta Rocca", email="rbrrcc@gmail.com" },
+  { name="Roberta Rocca", email="rbrrcc@gmail.com"},
 ]
 description = "A Python package to simulate multi-agent cognitive association tasks using embedding spaces"
 readme = "README.md"
