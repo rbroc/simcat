@@ -101,6 +101,7 @@ def test_two_agents():
             assert all([p in o.columns for p in ["prob_a0", "prob_a1"]])
             assert o["turn"].max() < 3
             _check_order_strict(o, i)
+    shutil.rmtree("logs")
 
 
 def test_interaction_styles():
@@ -130,6 +131,7 @@ def test_interaction_styles():
         assert len(probs["flexible"]) > len(probs["strict"])
         assert np.mean(probs["shortest"][:m]) < np.mean(probs["strict"][:m])
         assert np.mean(probs["shortest"][:m]) < np.mean(probs["flexible"][:m])
+    shutil.rmtree("logs")
 
 
 def test_three_agents():
@@ -146,3 +148,4 @@ def test_three_agents():
     outs = i.run_interaction(seeds=SEEDS, return_logs=True)
     for o in outs:
         _check_order_strict(o, i)
+    shutil.rmtree("logs")
