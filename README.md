@@ -38,7 +38,17 @@ A first study using this framework to investigate the effect of cognitive divers
 }
 ```
 
-A follow-up involving comprehensive investigation of the effect of turn-taking structures and working memory flexibility is available as a preprint at: ADD_LINK, and currently under review.
+A follow-up involving comprehensive investigation of the effect of turn-taking structures and working memory flexibility is available as a preprint at: \url{https://osf.io/preprints/psyarxiv/n3t6j}, and currently under review.
+```
+@misc{rocca2024diversity,
+  title={The effect of diversity and social interaction on cognitive search: An agent-based simulation},
+  url={osf.io/preprints/psyarxiv/n3t6j},
+  author={Rocca, Roberta and Tylén, Kristian},
+  publishr={PsyArXiv},
+  year={2024},
+
+}
+```
 Materials and documentation concerning this study are available under [`paper`](https://github.com/rbroc/simcat/tree/master/paper). 
 
 ### :gear:  Installation
@@ -151,8 +161,18 @@ simcat
 ```
 
 ### :book:  Citation
-- Add reference to paper
 
+If you use this work, please cite:
+```
+@misc{rocca2024diversity,
+  title={The effect of diversity and social interaction on cognitive search: An agent-based simulation},
+  url={osf.io/preprints/psyarxiv/n3t6j},
+  author={Rocca, Roberta and Tylén, Kristian},
+  publishr={PsyArXiv},
+  year={2024},
+
+}
+```
 -------------
 
 **TODO**:

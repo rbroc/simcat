@@ -1,5 +1,5 @@
 # Paper Materials
-This part of the repository includes code used for all three experiments in the paper: ADD_LINK.
+This part of the repository includes code used for all three experiments in the paper: \url{https://osf.io/preprints/psyarxiv/n3t6j}.
 This folder is structured as follows:
 - In `notebooks`, you can find notebooks for the following tasks:
     - `01-Baseline.ipynb` is the notebook used to estimate the stopping threshold for all simulations;
