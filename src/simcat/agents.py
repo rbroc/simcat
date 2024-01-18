@@ -9,12 +9,11 @@ from copy import deepcopy
 class Agent:
     """Initializes an agent
     Args:
-        name (str): specifies an ID for the agent
+        agent_name (str): specifies an ID for the agent
         matrix_filename (str): filename of agent's distance matrix
         dict_filename (str): filename of dictionary defining agent's word
             to index mapping (used to compute originality)
         vector_filename (str): filename of agent's vectors
-        path (str or Path): folder to agent's model in current wd.
         matrix_kwargs: named arguments for Matrix initialization
     """
 
@@ -23,12 +22,10 @@ class Agent:
         agent_name,
         matrix_filename,
         dict_filename=None,
-        vector_filename=None,
-        path=None,
-        **matrix_kwargs,
+        vector_filename=None
     ):
         self.name = agent_name or matrix_filename
-        self.matrix = Matrix(filename=matrix_filename, path=path, **matrix_kwargs)
+        self.matrix = Matrix(filename=matrix_filename)
         self.matrix_backup = deepcopy(self.matrix)
         if dict_filename:
             self.position_map = json.load(open(dict_filename, "r"))
@@ -62,10 +59,7 @@ class Agent:
         ]
 
         # Average distances between each pair of animals (only active words)
-        try:
-            avg_dist_remain = self.matrix.data.mean(axis=0).mean().round(5)
-        except:
-            avg_dist_remain = np.nan
+        avg_dist_remain = self.matrix.data.mean(axis=0).mean().round(5)
 
         # Mean distance from neighbors for each word (only active neighbors)
         mean_knn_dists = [

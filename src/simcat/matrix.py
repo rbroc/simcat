@@ -7,14 +7,11 @@ class Matrix:
     """Semantic memory of Agent
     Args:
         filename (str): file where similarity matrix is stored
-        path (str): relative path to folder where matrix is located
-        name (str, optional): optional name for model (if None, uses filename)
     """
 
-    def __init__(self, filename, path=None, name=None):
-        model = load_matrix(filename=filename, path=path)
+    def __init__(self, filename):
+        model = load_matrix(filename=filename)
         self.data = model.copy()
-        self.name = name or filename.split(".")[0]
 
     @property
     def words(self):

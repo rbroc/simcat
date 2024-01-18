@@ -259,10 +259,10 @@ class Interaction:
         )
         if self.save_folder:
             as_path = Path(self.save_folder)
-            as_path.mkdir(parents=True, exist_ok=True)
-            fpath = as_path / fname
         else:
-            fpath = Path("logs") / fname
+            as_path = Path("logs") 
+        as_path.mkdir(parents=True, exist_ok=True)
+        fpath = str(as_path / fname)
         return fpath
 
     def _get_next_agent(self, a_idx):

@@ -1,4 +1,3 @@
-from pathlib import Path
 import pandas as pd
 import numpy as np
 from scipy.special import softmax
@@ -6,15 +5,13 @@ from scipy.stats import entropy, truncnorm
 import math
 
 
-def load_matrix(filename, index_col=0, path=None):
+def load_matrix(filename, index_col=0):
     """Load matrix from file
     Args:
         filename (str): name of the file to load
         index_col (str): name of the index column
-        path (str): subfolder of current wd where to search
     """
-    f_path = str(Path(path) / filename) if path else filename
-    matrix = pd.read_csv(f_path, sep="\t", index_col=index_col)
+    matrix = pd.read_csv(filename, sep="\t", index_col=index_col)
     for i in range(matrix.shape[0]):
         matrix.iloc[i, i] = np.nan
     return matrix
