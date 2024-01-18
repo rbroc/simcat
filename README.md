@@ -46,7 +46,6 @@ A follow-up involving comprehensive investigation of the effect of turn-taking s
   author={Rocca, Roberta and Tylén, Kristian},
   publishr={PsyArXiv},
   year={2024},
-
 }
 ```
 Materials and documentation concerning this study are available under [`paper`](https://github.com/rbroc/simcat/tree/master/paper). 
@@ -170,6 +169,5 @@ If you use this work, please cite:
   author={Rocca, Roberta and Tylén, Kristian},
   publishr={PsyArXiv},
   year={2024},
-
 }
 ```
