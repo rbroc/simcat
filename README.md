@@ -2,7 +2,6 @@
 
 # simcat: a Python package to Simulate Multi-agent Cognitive Association Tasks
 ![tests](https://github.com/github/docs/actions/workflows/run_tests.yml/badge.svg)
-[![github actions pytest](https://github.com/rbroc/simcat/actions/workflows/pytest-cov-comment.yml/badge.svg)](https://github.com/rbroc/simcat/actions)
 [![code style: black](https://img.shields.io/badge/Code%20Style-Black-black)](https://black.readthedocs.io/en/stable/the_black_code_style/current_style.html)
 [![python version](https://img.shields.io/badge/Python-%3E=3.8-blue)](https://github.com/rbroc/simcat)
 [![license: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
