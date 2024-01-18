@@ -53,7 +53,7 @@ Materials and documentation concerning this study are available under [`paper`](
 ### :gear:  Installation
 We strongly recommend that you install `simcat` from pip:
 
-`pip install simcat`
+`pip install -U simcat`
 
 You can also install `simcat` from source by running:
 
@@ -73,18 +73,18 @@ Once you have installed `simcat` can easily run a simulation with the following 
 ```python
 from simcat import Interaction, Agent
 
-agent_1 = Agent(agent_name='agent_1', matrix_filename='sample/agent_1/matrix.tsv')
-agent_2 = Agent(agent_name='agent_2', matrix_filename='sample/agent_2/matrix.tsv')
+agent_1 = Agent(agent_name="agent_1", matrix_filename="sample/agent_1/matrix.tsv")
+agent_2 = Agent(agent_name="agent_2", matrix_filename="sample/agent_2/matrix.tsv")
 
-i = Interaction(agents=[agent_1, agent_2],
-                save_folder='./sample/outs', 
-                log_id='my_interaction',
-                nr_sim=2,
-                map_locations=False)
+i = Interaction(
+    agents=[agent_1, agent_2],
+    save_folder="./sample/outs",
+    log_id="my_interaction",
+    nr_sim=2,
+    map_locations=False,
+)
 
-i.run_interaction(seeds=['cat', 'dog'],
-                  interaction_type='strict',
-                  n_back=0)
+i.run_interaction(seeds=["cat", "dog"], interaction_type="strict", n_back=0)
 ```
 
 <div class="table-wrapper" markdown="block">
