@@ -44,7 +44,7 @@ jobs:
       url: https://pypi.org/p/simcat
     permissions:
       id-token: write  # IMPORTANT: mandatory for trusted publishing
-      content: read
+      contents: read
 
     steps:
     - name: Download all the dists
