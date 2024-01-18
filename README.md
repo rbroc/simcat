@@ -173,7 +173,3 @@ If you use this work, please cite:
 
 }
 ```
--------------
-
-**TODO**:
-- Add citations to preprint (in both READMEs)
