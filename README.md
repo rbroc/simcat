@@ -10,8 +10,8 @@ This is a Python package to perform simulations of multi-agent cognitive associa
 
 The package makes it eary to instantiate one or more agents, endow them with a semantic memory, defined as a vector space that can be different across agents, and have agents perform association tasks in the form of a *verbal fluency tasks* either individually of following different interaction structures.
 At present, the package includes two hard-coded rules:
-1. Agents always name the item in their semantic space which is closest (in terms of Euclidean distance) to the prompt at any given time;
-2. The simulation stops when all items in the semantic space have been named during a simulation, or when no items in the semantic space can be found, whose distance from the current prompt is lower than a set threshold, passed as a parameter to the simulation.
+1. Agents always name the item in their semantic space which has the lowest distance from the prompt (or has the strongest association, depending on options);
+2. The simulation stops when all items in the semantic space have been named during a simulation, or when no items in the semantic space can be found, whose distance from the current prompt is lower than (or higher than, depending on options) a set threshold, passed as a parameter to the simulation.
 These constraints could potentially be relaxed in future releases.
 
 When multiple agents perform the association task together, they can interact following three possible turn-taking rules:
