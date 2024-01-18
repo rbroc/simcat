@@ -151,8 +151,6 @@ simcat
 -------------
 
 **TODO**:
-- Remove all logs except from those that are used
-- Remove models too - or provide instructions for shallow checkout?
 - Fix tests and add badges & CI
 - Push package
 - Add citations to preprint (in both READMEs)
