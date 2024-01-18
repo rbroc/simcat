@@ -53,7 +53,7 @@ Materials and documentation concerning this study are available under [`paper`](
 ### :gear:  Installation
 We strongly recommend that you install `simcat` from pip:
 
-`pip install simcat==0.2`
+`pip install simcat`
 
 You can also install `simcat` from source by running:
 
