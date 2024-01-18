@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "simcat"
+version = "0.0.1"
+authors = [
+  { name="Roberta Rocca", email="rbrrcc@gmail.com" },
+]
+description = "A Python package to simulate multi-agent cognitive association tasks using embedding spaces"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+keywords = [
+    "cognition",
+    "social interaction",
+    "agent-based simulations",
+    "foraging",
+    "embedding models",
+]
+
+dependencies = [
+    "numpy==1.23.0",
+    "pandas==1.4.3",
+    "scikit_learn==1.1.1",
+    "scipy==1.8.1",
+    "umap-learn==0.5.5",
+    "seaborn==0.11.2",
+    "matplotlib==3.5.2"
+]
+
+[project.urls]
+Homepage = "https://github.com/rbroc/simcat"
+Issues = "https://github.com/rbroc/simcat/issues"
