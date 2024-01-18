@@ -49,7 +49,7 @@ or
 
 ```
 git clone https://github.com/rbroc/simcat.git`
-cd tomsup
+cd simcat
 pip3 install -e .
 ```
 
@@ -151,6 +151,5 @@ simcat
 -------------
 
 **TODO**:
-- Fix tests and add badges & CI
-- Push package
+- Fix tests and add badges & CI (push package)
 - Add citations to preprint (in both READMEs)
