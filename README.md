@@ -38,7 +38,7 @@ A first study using this framework to investigate the effect of cognitive divers
 }
 ```
 
-A follow-up involving comprehensive investigation of the effect of turn-taking structures and working memory flexibility is available as a preprint at: \url{https://osf.io/preprints/psyarxiv/n3t6j}, and currently under review.
+A follow-up involving comprehensive investigation of the effect of turn-taking structures and working memory flexibility is available as a preprint at: https://osf.io/preprints/psyarxiv/n3t6j, and currently under review.
 ```
 @misc{rocca2024diversity,
   title={The effect of diversity and social interaction on cognitive search: An agent-based simulation},
