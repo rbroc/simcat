@@ -21,14 +21,13 @@ jobs:
           pip install .
       - name: Lint with Black  
         run: |  
-          pip install black[jupyter] pytest pytest-cov
+          pip install black[jupyter] pytest pytest-cov coveralls
           black ./*
         continue-on-error: true  
       - name: Run and write pytest  
         run: |  
-          cd tests
           set -o pipefail
-          pytest --cov=tomsup --cov-report term-missing | tee pytest-coverage.txt
+          pytest ./tests --cov=simcat --cov-report term-missing -W ignore::UserWarning | tee pytest-coverage.txt
 
       #- name: Generate Coverage Report  
        # run: |  

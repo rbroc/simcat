@@ -3,9 +3,9 @@
 # simcat: a Python package to Simulate Multi-agent Cognitive Association Tasks
 
 [![github actions pytest](https://github.com/rbroc/simcat/actions/workflows/pytest-cov-comment.yml/badge.svg)](https://github.com/rbroc/simcat/actions)
-[![Code style: black](https://img.shields.io/badge/Code%20Style-Black-black)](https://black.readthedocs.io/en/stable/the_black_code_style/current_style.html)
-[![python version](https://img.shields.io/badge/Python-%3E=3.6-blue)](https://github.com/rbroc/simcat)
-[![license](https://img.shields.io/badge/license-Apache--2.0-blue)](https://github.com/rbroc/simcat/blob/master/LICENSE)
+[![code style: black](https://img.shields.io/badge/Code%20Style-Black-black)](https://black.readthedocs.io/en/stable/the_black_code_style/current_style.html)
+[![python version](https://img.shields.io/badge/Python-%3E=3.8-blue)](https://github.com/rbroc/simcat)
+[![license: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 This is a Python package to perform simulations of multi-agent cognitive association tasks (e.g., [the verbal fluency test](https://en.wikipedia.org/wiki/Verbal_fluency_test)).
 
