@@ -1,4 +1,4 @@
-<a href="https://github.com/rbroc/cosearch"><img src="https://github.com/rbroc/cosearch/raw/master/img/simcat-logo-title.png" width="200" align="right" /></a>
+<a href="https://github.com/rbroc/cosearch"><img src="https://github.com/rbroc/simcat/raw/master/img/simcat-logo-title.png" width="200" align="right" /></a>
 
 # simcat: a Python package to Simulate Multi-agent Cognitive Association Tasks
 ![tests](https://github.com/rbroc/simcat/actions/workflows/run-tests.yml/badge.svg?event=push)
