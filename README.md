@@ -25,47 +25,15 @@ For each simulation, a log of the entire association chain, including a range of
 
 ### :cherry_blossom:  Applications
 Applications of this framework include simulation of verbal fluency data, as well as computational studies investigating emergent properties of parameters such as **cognitive diversity** between agents and **turn-taking structures**.
-
-A first study using this framework to investigate the effect of cognitive diversity on search behavior and performance in the association task was published in the proceedings of the 2022 Annual Meeting of the Cognitive Science Society (available at: https://escholarship.org/uc/item/58v5d82w):
-```
-@inproceedings{rocca2022cognitive,
-  title={Cognitive diversity promotes collective creativity: an agent-based simulation},
-  author={Rocca, Roberta and Tylén, Kristian},
-  booktitle={Proceedings of the Annual Meeting of the Cognitive Science Society},
-  volume={44},
-  number={44},
-  year={2022}
-}
-```
-
-A follow-up involving comprehensive investigation of the effect of turn-taking structures and working memory flexibility is available as a preprint at: https://osf.io/preprints/psyarxiv/n3t6j, and currently under review.
-```
-@misc{rocca2024diversity,
-  title={The effect of diversity and social interaction on cognitive search: An agent-based simulation},
-  url={osf.io/preprints/psyarxiv/n3t6j},
-  author={Rocca, Roberta and Tylén, Kristian},
-  publishr={PsyArXiv},
-  year={2024},
-}
-```
-Materials and documentation concerning this study are available under [`paper`](https://github.com/rbroc/simcat/tree/master/paper). 
+A study on these topics are under review at CogSci.
+Materials and documentation concerning this study are available under `paper`.
+This also includes supplementary materials for that submission.
 
 ### :gear:  Installation
 We strongly recommend that you install `simcat` from pip:
 
 `pip install simcat`
 
-You can also install `simcat` from source by running:
-
-`pip install git+https://github.com/rbroc/simcat.git`
-
-or
-
-```
-git clone https://github.com/rbroc/simcat.git
-cd simcat
-pip3 install -e .
-```
 
 ### :robot: :speech_balloon:  Running a simulation
 Once you have installed `simcat` can easily run a simulation with the following command:
@@ -132,7 +100,7 @@ The columns in the output refer to the following:
 | `resp_neighbors_a{n}_current` | number of _remaining_ sub-threshold neighbors of the response item (relative to the semantic memory of the n-th agent). Items are dropped from agents' semantic space as they are named. |
 
 ### :hammer_and_wrench:  Maintenance and development
-Please feel free to contribute to this project. You can contribute to bug fixes :bug: or implement new functionality :seedling: by [opening a PR](https://github.com/rbroc/simcat/pulls) or [opening an issue](https://github.com/rbroc/simcat/issues).
+Please feel free to contribute to this project. You can contribute to bug fixes :bug: or implement new functionality :seedling: by opening a PR or an issue.
 You are also very welcome to contribute `docs`, which are not yet available.
 
 ### :file_folder:  Project structure
@@ -143,7 +111,9 @@ simcat
 ├── README.md
 ├── img
 ├── paper      
-│   ├── README.md            
+│   ├── README.md
+│   ├── cogsci_paper.pdf        
+│   ├── cogsci_supplementary_materials.pdf        
 │   ├── figures
 │   ├── logs
 │   ├── metrics
@@ -159,15 +129,3 @@ simcat
 └── tests
 ```
 
-### :book:  Citation
-
-If you use this work, please cite:
-```
-@misc{rocca2024diversity,
-  title={The effect of diversity and social interaction on cognitive search: An agent-based simulation},
-  url={osf.io/preprints/psyarxiv/n3t6j},
-  author={Rocca, Roberta and Tylén, Kristian},
-  publishr={PsyArXiv},
-  year={2024},
-}
-```
