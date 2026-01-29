@@ -34,6 +34,17 @@ We strongly recommend that you install `simcat` from pip:
 
 `pip install simcat`
 
+You can also install `simcat` from source by running:
+
+`pip install git+https://github.com/rbroc/simcat.git`
+
+or
+
+```
+git clone https://github.com/rbroc/simcat.git
+cd simcat
+pip3 install -e .
+```
 
 ### :robot: :speech_balloon:  Running a simulation
 Once you have installed `simcat` can easily run a simulation with the following command:
